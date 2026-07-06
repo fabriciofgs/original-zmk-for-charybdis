@@ -40,7 +40,7 @@
         };
 
         MiddleClick {
-            bindings = <&mkp MCLK>;
+            bindings = <&mkp MB5>;
             key-positions = <54 50>;
         };
     };
@@ -62,34 +62,23 @@
 
         base {
             bindings = <
-&ht ESC GRAVE                    &kp N1          &kp N2          &kp N3            &kp N4       &kp N5    &kp N6        &kp N7       &kp N8                  &kp N9                    &kp N0                   &kp MINUS
-&kp TAB                          &kp Q           &kp W           &kp E             &kp R        &kp T     &kp Y         &kp U        &kp I                   &kp O                     &kp P                    &kp EQUAL
-&ht LEFT_SHIFT LEFT_PARENTHESIS  &ht LEFT_ALT A  &ht LEFT_GUI S  &ht LEFT_SHIFT D  &ht LCTRL F  &kp G     &kp H         &ht RCTRL J  &ht RIGHT_SHIFT K       &ht RIGHT_GUI L           &ht RIGHT_ALT SEMICOLON  &kp APOS
-&ht LCTRL RIGHT_PARENTHESIS      &kp Z           &kp X           &kp C             &kp V        &kp B     &kp N         &kp M        &ht LEFT_BRACKET COMMA  &ht RIGHT_BRACKET PERIOD  &kp SLASH                &kp NON_US_BACKSLASH
-                                                                 &kp BACKSPACE     &mkp MB1     &tog 1    &kp ENTER     &kp SPACE
-                                                                                   &mkp MB2     &mo 2     &sk LEFT_GUI
+&ht ESC GRAVE                    &kp N1          &kp N2          &kp N3            &kp N4       &kp N5       &kp N6      &kp N7       &kp N8                  &kp N9                    &kp N0                   &kp MINUS
+&kp TAB                          &kp Q           &kp W           &kp E             &kp R        &kp T        &kp Y       &kp U        &kp I                   &kp O                     &kp P                    &kp EQUAL
+&ht LEFT_SHIFT LEFT_PARENTHESIS  &ht LEFT_ALT A  &ht LEFT_GUI S  &ht LEFT_SHIFT D  &ht LCTRL F  &kp G        &kp H       &ht RCTRL J  &ht RIGHT_SHIFT K       &ht RIGHT_GUI L           &ht RIGHT_ALT SEMICOLON  &kp APOS
+&ht LCTRL RIGHT_PARENTHESIS      &kp Z           &kp X           &kp C             &kp V        &kp B        &kp N       &kp M        &ht LEFT_BRACKET COMMA  &ht RIGHT_BRACKET PERIOD  &kp SLASH                &kp NON_US_BACKSLASH
+                                                                 &kp BACKSPACE     &mkp MB1     &tog 1       &kp ENTER   &kp SPACE
+                                                                                   &mkp MB2     &mkp MCLK    &sk DELETE
             >;
         };
 
         numberefunction {
             bindings = <
-&trans  &trans  &trans   &trans   &trans          &trans             &trans  &trans             &trans              &trans                    &trans                  &trans
-&trans  &kp F1  &kp F2   &kp F3   &kp F4          &trans             &kp N5  &kp NUMBER_6       &kp N7              &kp N8                    &kp N9                  &trans
-&trans  &kp F5  &kp F6   &kp F7   &kp F8          &kp PRINTSCREEN    &kp N0  &ht PLUS NUMBER_1  &ht MINUS NUMBER_2  &ht KP_MULTIPLY NUMBER_3  &ht KP_DIVIDE NUMBER_4  &trans
-&trans  &kp F9  &kp F10  &kp F11  &kp F12         &kp CAPS           &trans  &kp EQUAL          &kp COMMA           &kp PERIOD                &trans                  &trans
-                         &trans   &kp LEFT_SHIFT  &trans             &trans  &trans
-                                  &trans          &trans             &trans
-            >;
-        };
-
-        special {
-            bindings = <
-&trans  &trans   &trans  &trans            &trans                &trans                   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&trans  &kp ESC  &trans  &kp GREATER_THAN  &kp LEFT_BRACE        &kp RIGHT_BRACE          &trans          &kp END       &kp HOME      &trans        &trans        &trans
-&trans  &kp TAB  &trans  &kp LESS_THAN     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp LEFT_ARROW  &kp DOWN      &kp UP_ARROW  &kp RIGHT     &trans        &trans
-&trans  &trans   &trans  &kp BACKSLASH     &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &trans          &trans        &trans        &trans        &trans        &trans
-                         &trans            &trans                &trans                   &trans          &trans
-                                           &trans                &trans                   &trans
+&kp ESC         &kp F1                 &kp F2            &kp F3        &kp F4          &kp F5                  &kp F6           &kp F7             &kp F8              &kp F9                    &kp F10                 &kp F11
+&bt BT_SEL 0    &kp RIGHT_BRACE        &kp PAGE_UP       &kp UP_ARROW  &kp PAGE_DOWN   &kp LEFT_BRACE          &kp N5           &kp NUMBER_6       &kp N7              &kp N8                    &kp N9                  &kp F12
+&bt BT_SEL 1    &kp RIGHT_PARENTHESIS  &kp LEFT          &kp DOWN      &kp RIGHT       &kp LEFT_PARENTHESIS    &kp N0           &ht PLUS NUMBER_1  &ht MINUS NUMBER_2  &ht KP_MULTIPLY NUMBER_3  &ht KP_DIVIDE NUMBER_4  &trans
+&bt BT_CLR_ALL  &kp RIGHT_BRACKET      &kp GREATER_THAN  &kp ENTER     &kp LESS_THAN   &kp LEFT_BRACKET        &kp PRINTSCREEN  &kp EQUAL          &kp COMMA           &kp PERIOD                &trans                  &trans
+                                                         &trans        &kp LEFT_SHIFT  &trans                  &trans           &trans
+                                                                       &trans          &trans                  &trans
             >;
         };
     };
