@@ -37,5 +37,28 @@
             ;
     };
 
+     /*
+     * The trackball is physically on the right/peripheral half.
+     * This input-split node exists on both halves.
+     */
+    split_inputs {
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        trackball_split: trackball_split@0 {
+            compatible = "zmk,input-split";
+            reg = <0>;
+        };
+    };
+
+    /*
+     * The actual listener runs on the central (left) half.
+     * It is disabled here so both halves can include this .dtsi.
+     */
+    trackball_listener: trackball_listener {
+        compatible = "zmk,input-listener";
+        status = "disabled";
+        device = <&trackball_split>;
+    };
 };
 
